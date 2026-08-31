@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17130d">
+<meta name="description" content="Explore the Seven Bridges of Königsberg, Euler's breakthrough, graph theory, and its modern applications.">
+<title>7 Bridges of Königsberg — Learn More</title>
+<style>
+:root{
+  --bg:#f5efe2; --paper:#fffaf0; --ink:#211c16; --muted:#6d6255;
+  --gold:#a8792b; --line:#d9c9a8; --dark:#17130d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); background:
+  radial-gradient(circle at 20% 0%,rgba(168,121,43,.12),transparent 28rem),
+  linear-gradient(180deg,#efe5d1 0%,var(--bg) 35%,#f8f2e6 100%);
+  font-family:Georgia,"Times New Roman",serif; line-height:1.65;
+}
+.wrap{width:min(920px,92%);margin:auto}
+.hero{padding:54px 0 38px;text-align:center;border-bottom:1px solid var(--line)}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font:600 12px/1.2 system-ui,sans-serif;color:var(--gold)}
+h1{font-size:clamp(38px,9vw,72px);line-height:1.02;margin:14px 0 10px}
+.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px}
+.badge{display:inline-block;margin-top:24px;padding:8px 14px;border:1px solid var(--gold);border-radius:999px;font:600 12px system-ui,sans-serif;color:var(--gold)}
+main{padding:28px 0 60px}
+.card{
+  background:rgba(255,250,240,.82);border:1px solid var(--line);border-radius:22px;
+  padding:28px;margin:18px 0;box-shadow:0 10px 35px rgba(70,48,20,.06)
+}
+h2{font-size:30px;line-height:1.15;margin:0 0 12px}
+h3{font-size:20px;margin:24px 0 5px}
+.lead{font-size:20px}
+.quote{border-left:4px solid var(--gold);padding:10px 18px;margin:20px 0;font-size:21px;font-style:italic}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.mini{padding:18px;border:1px solid var(--line);border-radius:16px;background:#fffdf7}
+.num{font:700 13px system-ui,sans-serif;color:var(--gold);letter-spacing:.08em}
+.timeline{display:grid;gap:10px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.dot{min-width:34px;height:34px;border-radius:50%;background:var(--dark);color:#fff;display:grid;place-items:center;font:700 13px system-ui,sans-serif}
+.flow{font-size:18px;text-align:center;padding:20px;border-radius:16px;background:#211c16;color:#f8edda}
+.cta{text-align:center}
+footer{text-align:center;border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+.small{font-size:14px;color:var(--muted)}
+a{color:var(--gold)}
+@media(max-width:650px){
+ .hero{padding-top:38px}.card{padding:21px;border-radius:18px}
+ .grid{grid-template-columns:1fr}h2{font-size:26px}.lead{font-size:18px}
+ .quote{font-size:18px}.flow{font-size:16px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">National Institute of Technology Calicut · Mathematics & Computing</div>
+    <h1>7 Bridges of Königsberg</h1>
+    <p>How a city puzzle became a mathematical concept.</p>
+    <div class="badge">SCAN · EXPLORE · UNDERSTAND</div>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="card">
+  <h2>🌉 The Problem</h2>
+  <p class="lead">Can you cross all seven bridges exactly once?</p>
+  <p>The old Prussian city of Königsberg was divided by the Pregel River into two islands and two mainland banks, connected by seven bridges.</p>
+  <div class="quote">“Try crossing all bridges without using a bridge twice!”</div>
+  <p>The puzzle looks like a question about walking through a city. Euler showed that the important part is not the exact map — it is the <strong>pattern of connections</strong>.</p>
+</section>
+
+<section class="card">
+  <h2>🧠 Euler's Breakthrough</h2>
+  <p>Mathematician <strong>Leonhard Euler</strong> studied the seven-bridges problem and simplified the city into a mathematical network.</p>
+  <div class="grid">
+    <div class="mini"><div class="num">LANDMASSES</div><h3>→ Vertices</h3><p>Each land region becomes a point, or <strong>node</strong>.</p></div>
+    <div class="mini"><div class="num">BRIDGES</div><h3>→ Edges</h3><p>Each bridge becomes a connection, or <strong>edge</strong>.</p></div>
+  </div>
+  <p>This way of thinking helped establish the foundations of what we now call <strong>graph theory</strong>.</p>
+</section>
+
+<section class="card">
+  <h2>🔵 What Is Graph Theory?</h2>
+  <p>Graph theory studies structures made from objects and the connections between them.</p>
+  <div class="grid">
+    <div class="mini"><h3>Vertices / Nodes</h3><p>Represent locations, people, webpages, devices, or other objects.</p></div>
+    <div class="mini"><h3>Edges / Connections</h3><p>Represent roads, relationships, links, or other connections.</p></div>
+  </div>
+  <p>For the Königsberg problem, the four land regions are represented by vertices and the seven bridges by edges.</p>
+</section>
+
+<section class="card">
+  <h2>🔢 The Key Idea: Degree</h2>
+  <p>The <strong>degree</strong> of a vertex is the number of edges connected to it.</p>
+  <p>For a closed route that uses every edge exactly once, every vertex must have an <strong>even degree</strong>. The original Königsberg network does not satisfy this condition.</p>
+  <div class="flow">Therefore, the seven bridges cannot all be crossed exactly once in a closed walk.</div>
+  <p class="small">This is the central mathematical insight behind the classic problem.</p>
+</section>
+
+<section class="card">
+  <h2>🌐 From Bridges to the Modern World</h2>
+  <div class="grid">
+    <div class="mini"><h3>🗺️ Routes & Maps</h3><p>Locations can be represented as nodes and roads as edges to study routes through a network.</p></div>
+    <div class="mini"><h3>🌐 The Internet</h3><p>Webpages and their links can be represented as a network.</p></div>
+    <div class="mini"><h3>👥 Social Networks</h3><p>People can be nodes and relationships can be edges.</p></div>
+    <div class="mini"><h3>⚙️ Network Analysis</h3><p>Graph-based methods help us understand and optimize connected systems.</p></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>💡 The Big Idea</h2>
+  <p class="lead">Euler changed the question.</p>
+  <p>Instead of asking only <em>“How do I physically cross these bridges?”</em>, we can ask:</p>
+  <div class="quote">“What is the structure of the connections?”</div>
+  <p>That shift from focusing on the physical layout to focusing on <strong>connectivity</strong> is the powerful idea behind graph theory.</p>
+</section>
+
+<section class="card">
+  <h2>🏛️ From a City Puzzle to a Mathematical Field</h2>
+  <div class="timeline">
+    <div class="step"><div class="dot">1</div><div><strong>Königsberg</strong><br>Seven bridges create a puzzle.</div></div>
+    <div class="step"><div class="dot">2</div><div><strong>Euler</strong><br>The problem is translated into a network.</div></div>
+    <div class="step"><div class="dot">3</div><div><strong>Vertices & Edges</strong><br>Land becomes nodes; bridges become connections.</div></div>
+    <div class="step"><div class="dot">4</div><div><strong>Graph Theory</strong><br>A new mathematical way to study networks emerges.</div></div>
+    <div class="step"><div class="dot">5</div><div><strong>Modern Networks</strong><br>The same language helps describe many connected systems.</div></div>
+  </div>
+</section>
+
+<section class="card cta">
+  <h2>🌉 One Puzzle. A Huge Idea.</h2>
+  <p>What began as a question about seven bridges became a gateway to understanding networks all around us.</p>
+  <p><strong>Thank you for exploring!</strong></p>
+  <p class="small">Exhibition Project · Department of Mathematics · Mathematics and Computing · NIT Calicut</p>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">7 Bridges of Königsberg · Exhibition Learning Page</div>
+</footer>
+</body>
+</html>
